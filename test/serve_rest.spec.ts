@@ -248,5 +248,10 @@ describe('ServeRest API', () => {
     });
   });
 
+  afterEach(async () => {
+    // Adiciona um pequeno delay de 1 segundo entre os testes para evitar bloqueio por Teste de Carga (HTTP 429) da ServeRest
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+  });
+
   afterAll(() => p.reporter.end());
 });
