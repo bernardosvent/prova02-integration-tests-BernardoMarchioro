@@ -104,7 +104,7 @@ describe('ServeRest API', () => {
         .returns('_id');
     });
 
-    it('Cadastro um novo produto', async () => {
+    it('Cadastro um segundo novo produto', async () => {
       idProduto2 = await p
         .spec()
         .post(`${baseUrl}/produtos`)
